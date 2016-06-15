@@ -1,0 +1,23 @@
+.q{
+  border: solid darkgreen 2px;
+  width: 300px;
+  margin: auto;
+  text-align: justify;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#timer{
+  font-weight: bold;
+  font-family: verdana;
+  font-size: 20px;
+}
+
+#timer-wrapper{
+  width: 10%;
+  height: 10%;
+  margin: auto;
+  text-align: center;
+  border: solid 2px red;
+  border-radius: 50%;
+}

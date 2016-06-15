@@ -1,53 +1,38 @@
-//refactor: fix the buttons so that they can only be clicked once.
-//refactor: use setInterval not setTimeout
+//refactor: date.now()
 
-var time = new Date('June 15, 2016 00:30:00');
+var stopWatch = document.getElementById('timer');
+var time = new Date('June 15, 2016 00:02:00');
+var tick = 1000;
 var intervalId;
 
 function timer () {
-  //time.setSeconds(time.getSeconds() + 1);
-  time.setMilliseconds(time.getMilliseconds() - 10);
-  //time.setMilliseconds(time.getMilliseconds() + 10);
-  var h = time.getHours();
+  time.setMilliseconds(time.getMilliseconds() - tick);
+
   var m = time.getMinutes();
   var s = time.getSeconds();
-  var mm = time.getMilliseconds();
-  //var mm = time.getMilliseconds();
+  m = checkTime(m);
+  s = checkTime(s);
 
-  var stopWatch = document.getElementById('timer');
-  stopWatch.innerHTML = h + ':' + m + ':' + s + ':' + mm;
+  stopWatch.innerHTML = m + ':' + s;
+}
 
-  intervalId = setTimeout(timer, 10);
+function startTimer(){
+  intervalId = setInterval(timer, tick);
 }
 
 function stopTimer() {
-  clearTimeout(intervalId);
+  clearInterval(intervalId);
+}
+
+function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
 }
 
 var start = document.getElementById('start');
-start.addEventListener('click', timer, false);
+start.addEventListener('click', startTimer, false);
 
 var stop = document.getElementById('stop');
 stop.addEventListener('click', stopTimer, false);
-
-
-////////////////////////////////////////
-
-// var now = new Date();
-// var nowS = now.getSeconds();
-// var nowM = now.getMinutes();
-// var nowH = now.getHours();
-//
-// function timer () {
-//   var time = new Date();
-//   var s = time.getSeconds() - nowS;
-//   var m = time.getMinutes() - nowM;
-//   var h = time.getHours() - nowH;
-//
-//   var stopClock = document.getElementById('timer');
-//   stopClock.innerHTML = h + ':' + m + ':' + s;
-//
-//   setTimeout(timer, 1000);
-// }
-//
-// window.addEventListener('load', timer, false);
