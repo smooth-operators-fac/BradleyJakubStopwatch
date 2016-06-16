@@ -1,6 +1,12 @@
+
+div.q div.options-nav div.left p, div.middle-left p,
+div.middle-right p, div.right p {
+  margin-top: 15%;
+}
+
 #div-wrapper{
   position: relative;
-  width: 810px;
+  width: 80%;
   height: 310px;
   border: solid darkgreen 5px;
   text-align: center;
@@ -12,7 +18,7 @@
 div.q{
   position: absolute;
   border: solid darkgreen 5px;
-  width: 800px;
+  width: 100%;
   height: 280px;
   margin: auto;
   text-align: justify;
@@ -66,30 +72,12 @@ div.q div.options-nav div.right{
 }
 
 #intro{
-  display: none;
-}
-
-#q1{
   display: block;
 }
 
-#q2{
+#q1, #q2, #q3, #q4, #q5, #pass, #fail {
   display: none;
 }
-
-#q3{
-  display: none;
-}
-
-#q4{
-  display: none;
-}
-
-#q5{
-  display: none;
-}
-
-
 
 #timer{
   font-weight: bold;
@@ -106,11 +94,6 @@ div.q div.options-nav div.right{
   border-radius: 50%;
 }
 
-#buttons{
-  text-align: center;
-  margin: 5px;
-}
-
-#start:hover, #stop:hover{
+#start:hover {
   color: green;
 }

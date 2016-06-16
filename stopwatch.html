@@ -8,41 +8,37 @@
 
 
       <div id='timer-wrapper'>
-    <p id="timer">02:00</p>
+        <p id="timer">02:00</p>
       </div>
-
-    <div id="buttons">
-    <button id="start">START</button>
-    <button id="stop">STOP</button>
-    </div>
 
 <div id="div-wrapper">
 
 <div class="q" id="intro">
-Press start button above to begin your quiz.
-You will have 1:30 minutes to complete it.<br><br>
-5 seconds will deducted from your time if you choose
-an incorrect answer.<br><br> You won't be allowed to progress
-until you select the correct answer.
+  Press start button above to begin your quiz.
+  You will have 1:30 minutes to complete it.<br><br>
+  5 seconds will deducted from your time if you choose
+  an incorrect answer.<br><br> You won't be allowed to progress
+  until you select the correct answer.<br><br>
+  <button id="start">START</button>
 </div>
 
 <div class="q" id="q1">
   What is the default position of CSS elements?
   <div class="options-nav">
-    <div class="left correct">Static</div>
-    <div class="middle-left wrong">Relative</div>
-    <div class="middle-right wrong">Absolute</div>
-    <div class="right wrong">Fixed</div>
+    <div class="left correct"><p>Static</p></div>
+    <div class="middle-left wrong"><p>Relative</p></div>
+    <div class="middle-right wrong"><p>Absolute</p></div>
+    <div class="right wrong"><p>Fixed</p></div>
   </div>
 </div>
 
 <div class="q" id="q2">
   What is Jakub's favourite ice cream flavour?
   <div class="options-nav">
-    <div class="left wrong">Kiwi</div>
-    <div class="middle-left wrong">Lemon</div>
-    <div class="middle-right correct">Chocolate</div>
-    <div class="right wrong">Vanilla</div>
+    <div class="left wrong"><p>Kiwi</p></div>
+    <div class="middle-left wrong"><p>Lemon</p></div>
+    <div class="middle-right correct"><p>Chocolate</p></div>
+    <div class="right wrong"><p>Vanilla</p></div>
   </div>
 </div>
 
@@ -50,10 +46,10 @@ until you select the correct answer.
   What do we call JavaScript trait whereby we determine
   where a variable is accessible from?
   <div class="options-nav">
-    <div class="left wrong">Hoisting</div>
-    <div class="middle-left correct">Scoping</div>
-    <div class="middle-right wrong">Accesibility</div>
-    <div class="right wrong">None of the above</div>
+    <div class="left wrong"><p>Hoisting</p></div>
+    <div class="middle-left correct"><p>Scoping</p></div>
+    <div class="middle-right wrong"><p>Accesibility</p></div>
+    <div class="right wrong"><p>None of the above</p></div>
   </div>
 </div>
 
@@ -62,22 +58,33 @@ until you select the correct answer.
   typeof bar === "object" to determine if bar is an
   object?
   <div class="options-nav">
-    <div class="left wrong">No pitfall</div>
-    <div class="middle-left correct">Null is also an object</div>
-    <div class="middle-right wrong">We cannot use 'typeof' to
-      determine if something is an object</div>
-    <div class="right wrong">The browser might crash</div>
+    <div class="left wrong"><p>No pitfall</p></div>
+    <div class="middle-left correct"><p>Null is also an object</p></div>
+    <div class="middle-right wrong"><p>Cannot use 'typeof' on null</p></div>
+    <div class="right wrong"><p>The browser might crash</p></div>
   </div>
 </div>
 
 <div class="q" id="q5">
   What is Bradley's favourite non-alcoholic drink?
   <div class="options-nav">
-    <div class="left correct">Coca Cola</div>
-    <div class="middle-left wrong">Sprite</div>
-    <div class="middle-right wrong">Tea</div>
-    <div class="right wrong">Spring virgin water</div>
+    <div class="left correct"><p>Coca Cola</p></div>
+    <div class="middle-left wrong"><p>Sprite</p></div>
+    <div class="middle-right wrong"><p>Tea</p></div>
+    <div class="right wrong"><p>Spring virgin water</p></div>
   </div>
+</div>
+
+<div class="q" id="pass">
+  Congratulations! To play again click the button below.
+  <br><br>
+  <button id="passStart">START</button>
+</div>
+
+<div class="q" id="fail">
+  Time's up! To play again click the button below.
+  <br><br>
+  <button id="failStart">START</button>
 </div>
 
 </div>
@@ -90,3 +97,4 @@ until you select the correct answer.
 
 
   </body>
+</html>
