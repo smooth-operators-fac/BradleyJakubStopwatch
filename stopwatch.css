@@ -1,11 +1,95 @@
-.q{
-  border: solid darkgreen 2px;
-  width: 300px;
+#div-wrapper{
+  position: relative;
+  width: 810px;
+  height: 310px;
+  border: solid darkgreen 5px;
+  text-align: center;
   margin: auto;
-  text-align: justify;
-  padding: 10px;
+  margin-bottom: 5px;
   border-radius: 5px;
 }
+
+div.q{
+  position: absolute;
+  border: solid darkgreen 5px;
+  width: 800px;
+  height: 280px;
+  margin: auto;
+  text-align: justify;
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 5px;
+}
+
+div.q div.options-nav{
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  border: solid black 1px;
+  width: 100%;
+  height: 80px;
+  padding: 0px;
+}
+
+div.left:hover, div.middle-left:hover,
+div.middle-right:hover, div.right:hover{
+  background-color: lightgrey;
+}
+
+div.q div.options-nav div.left{
+  display: inline-block;
+  border: solid black 1px;
+  width: 24.3%;
+  height: 100%;
+}
+
+div.q div.options-nav div.middle-left{
+  display: inline-block;
+  border: solid black 1px;
+  width: 24.3%;
+  height: 100%;
+}
+
+div.q div.options-nav div.middle-right{
+  display: inline-block;
+  border: solid black 1px;
+  width: 24.3%;
+  height: 100%;
+}
+
+div.q div.options-nav div.right{
+  display: inline-block;
+  border: solid black 1px;
+  width: 24.3%;
+  height: 100%;
+}
+
+#intro{
+  display: none;
+}
+
+#q1{
+  display: block;
+}
+
+#q2{
+  display: none;
+}
+
+#q3{
+  display: none;
+}
+
+#q4{
+  display: none;
+}
+
+#q5{
+  display: none;
+}
+
+
 
 #timer{
   font-weight: bold;
@@ -20,4 +104,13 @@
   text-align: center;
   border: solid 2px red;
   border-radius: 50%;
+}
+
+#buttons{
+  text-align: center;
+  margin: 5px;
+}
+
+#start:hover, #stop:hover{
+  color: green;
 }
