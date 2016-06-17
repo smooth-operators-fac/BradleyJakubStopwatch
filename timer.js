@@ -97,7 +97,7 @@ function addTime(currentDiv, nextDiv) {
     }
   };
 }
-//decreases timer by 4 seconds.
+//decreases timer by 30 seconds.
 function removeTime() {
   time.setMilliseconds(time.getMilliseconds() - 4000);
 }
@@ -110,7 +110,7 @@ function changeBackgroundColour(wrongAnswerDiv){
 //changes background colours of wrongAnswers back to white.
 function resetColours() {
   [].forEach.call(wrongAnswers, function(elem) {
-    elem.style.backgroundColor = "white";
+    elem.style.backgroundColor = "";
   });
 }
 //advances quiz to the game over div.
