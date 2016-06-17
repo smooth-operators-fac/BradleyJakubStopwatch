@@ -3,6 +3,10 @@
 
 Group project week 2
 
+[gh-pages link](http://smooth-operators-fac.github.io/BradleyJakubStopwatch/stopwatch.html)
+
+[gh-pages test page link](http://smooth-operators-fac.github.io/BradleyJakubStopwatch/stopwatchtest.html)
+
 
 The idea is to follow the TDD cycle to create a stop watch, using ping pong.
 
