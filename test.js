@@ -1,5 +1,5 @@
 //////////
-timer tests
+//timer tests
 QUnit.test('testing the testing environment',
   function(assert){
     var actual = 1;
@@ -69,16 +69,6 @@ QUnit.test('seconds continue to decrement at a regular interval after startTimer
 });
 
 QUnit.test('when less than 10, seconds and minutes shown in 00:00 format',
-  function(assert){
-    stopWatch.innerHTML = "01:10";
-    time = new Date('June 15, 2016 00:01:10');
-    timer();
-    var timeNow = stopWatch.innerHTML.split(':');
-    assert.equal(timeNow[0] === '01', true, 'minutes shown in 00:00 format');
-    assert.equal(timeNow[1] === '09', true, 'seconds shown in 00:00 format');
-});
-
-QUnit.test('when stopTimer is called, timer stops ticking',
   function(assert){
     stopWatch.innerHTML = "01:10";
     time = new Date('June 15, 2016 00:01:10');
