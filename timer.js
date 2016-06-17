@@ -71,16 +71,18 @@ function attachClickEvent(elem, e) {
   elem.addEventListener('click', e, false);
 }
 //attaches startTimer to every start button
-startButtons.forEach(function(a){
-  attachClickEvent(a, startTimer);
+startButtons.forEach(function(elem){
+  attachClickEvent(elem, startTimer);
+  attachClickEvent(elem, resetColours);
 });
 //attaches addTime to every correct answer
 [].forEach.call(correctAnswers, function(elem, index) {
   attachClickEvent(elem, addTime(questions[index],questions[index + 1]));
 });
 //attach removeTime to every incorrect answer
-[].forEach.call(wrongAnswers, function(elem) {
+[].forEach.call(wrongAnswers, function(elem, index) {
   attachClickEvent(elem, removeTime);
+  attachClickEvent(elem, changeBackgroundColour(wrongAnswers[index]));
 });
 //increases timer by four seconds and advances game to the next div.
 function addTime(currentDiv, nextDiv) {
@@ -90,7 +92,7 @@ function addTime(currentDiv, nextDiv) {
     time.setMilliseconds(time.getMilliseconds() + 4000);
     document.getElementById(currentDiv).style.display = "none";
     document.getElementById(nextDiv).style.display = "block";
-    if (q2 === 'pass') {
+    if (nextDiv === 'pass') {
       stopTimer();
     }
   };
@@ -98,6 +100,18 @@ function addTime(currentDiv, nextDiv) {
 //decreases timer by 4 seconds.
 function removeTime() {
   time.setMilliseconds(time.getMilliseconds() - 4000);
+}
+//changes backgroundColor to red.
+function changeBackgroundColour(wrongAnswerDiv){
+  return function() {
+  wrongAnswerDiv.style.backgroundColor = "red";
+  };
+}
+//changes background colours of wrongAnswers back to white.
+function resetColours() {
+  [].forEach.call(wrongAnswers, function(elem) {
+    elem.style.backgroundColor = "white";
+  });
 }
 //advances quiz to the game over div.
 function gameOver() {
