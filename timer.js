@@ -1,5 +1,5 @@
 var stopWatch = document.getElementById('timer');
-var time = new Date('June 15, 2016 00:01:30');
+var time = new Date('June 15, 2016 00:02:00');
 var tick = 1000;
 var intervalId;
 //timer decreases time shown in stopWatch by 1000ms
@@ -27,8 +27,8 @@ function startTimer(){
 }
 //resets stopWatch to the starting time
 function resetTimerToDefault () {
-  time = new Date('June 15, 2016 00:01:30');
-  stopWatch.innerHTML = '01:30';
+  time = new Date('June 15, 2016 00:02:00');
+  stopWatch.innerHTML = '02:00';
 }
 //hides the introduction or end divs and displays the first question.
 function showFirstQuestion() {
@@ -83,13 +83,13 @@ startButtons.forEach(function(a){
   attachClickEvent(elem, removeTime);
 });
 //increases timer by four seconds and advances game to the next div.
-function addTime(q, q2) {
+function addTime(currentDiv, nextDiv) {
 //a closure is used to stop this function being invoked when it is
 //attached to an element as an event handler.
   return function() {
     time.setMilliseconds(time.getMilliseconds() + 4000);
-    document.getElementById(q).style.display = "none";
-    document.getElementById(q2).style.display = "block";
+    document.getElementById(currentDiv).style.display = "none";
+    document.getElementById(nextDiv).style.display = "block";
     if (q2 === 'pass') {
       stopTimer();
     }
