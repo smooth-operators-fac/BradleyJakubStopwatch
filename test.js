@@ -1,5 +1,5 @@
-////////////
-// timer tests
+//////////
+timer tests
 QUnit.test('testing the testing environment',
   function(assert){
     var actual = 1;
